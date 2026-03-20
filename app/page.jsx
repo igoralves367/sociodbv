@@ -62,15 +62,11 @@ const features = [
     icon: "✦",
     title: "Uniformes",
     desc: "Você ajuda a garantir que cada desbravador tenha seu uniforme, representando o clube com identidade, organização e orgulho.",
-    image: "/photos/uniforme.jpeg",
-    alt: "Uniformes dos desbravadores do Clube Nações",
   },
   {
     icon: "⬢",
     title: "Fanfarra",
     desc: "Você ajuda a fortalecer nossa fanfarra, com manutenção dos instrumentos, estrutura e crescimento do grupo, levando som, presença e impacto por onde o clube passa.",
-    image: "/photos/fanfarra.jpeg",
-    alt: "Fanfarra do Clube Nações em apresentação",
   },
 ];
 
@@ -410,30 +406,19 @@ export default function Page() {
             {features.map((item) => (
               <article
                 key={item.title}
-                className="overflow-hidden rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(12,12,18,0.98),rgba(8,8,13,0.98))] shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]"
+                className="rounded-[28px] border border-white/10 bg-[linear-gradient(180deg,rgba(12,12,18,0.98),rgba(8,8,13,0.98))] p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] md:p-10"
               >
-                <div className="relative aspect-[16/10] overflow-hidden bg-black">
-                  <img
-                    src={item.image}
-                    alt={item.alt}
-                    className="h-full w-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[rgba(8,8,13,0.9)] via-transparent to-transparent" />
+                <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-violet-500/15 text-2xl text-violet-300">
+                  {item.icon}
                 </div>
 
-                <div className="p-8 md:p-10">
-                  <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-violet-500/15 text-2xl text-violet-300">
-                    {item.icon}
-                  </div>
+                <h3 className="text-balance font-sans text-2xl font-semibold leading-tight text-zinc-50 md:text-3xl">
+                  {item.title}
+                </h3>
 
-                  <h3 className="text-balance font-sans text-2xl font-semibold leading-tight text-zinc-50 md:text-3xl">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-5 font-sans text-base leading-8 text-zinc-300 md:text-lg">
-                    {item.desc}
-                  </p>
-                </div>
+                <p className="mt-5 font-sans text-base leading-8 text-zinc-300 md:text-lg">
+                  {item.desc}
+                </p>
               </article>
             ))}
           </div>
@@ -443,24 +428,13 @@ export default function Page() {
         <section className="px-5 py-10 md:px-6 md:py-18">
           <div className="mx-auto max-w-6xl overflow-hidden rounded-[32px] border border-white/10 bg-[linear-gradient(180deg,rgba(14,14,22,0.96),rgba(8,8,13,0.98))]">
             <div className="grid gap-px bg-white/10 lg:grid-cols-[0.95fr_1.05fr]">
-              <div className="grid bg-black md:grid-rows-[1.2fr_1fr]">
-                <div className="relative overflow-hidden">
-                  <img
-                    src="/photos/campori.jpeg"
-                    alt="Desbravadores reunidos no Campori"
-                    className="h-full w-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
-                </div>
-
-                <div className="relative overflow-hidden border-t border-white/10">
+              <div className="relative overflow-hidden bg-black">
                   <img
                     src="/photos/campori2.jpg"
                     alt="Momento especial do Clube Nações no Campori"
                     className="h-full w-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
-                </div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-transparent" />
               </div>
 
               <div className="p-8 md:p-12">
